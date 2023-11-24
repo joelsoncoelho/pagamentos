@@ -1,5 +1,6 @@
 package br.com.alurafood.pagamentos.dto;
 
+import br.com.alurafood.pagamentos.model.ItemDoPedido;
 import br.com.alurafood.pagamentos.model.Status;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -12,6 +13,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -34,4 +36,6 @@ public class PagamentoDto {
     private Long pedidoId;
 
     private Long formaDePagamentoId;
+
+    private List<ItemDoPedido> itens;
 }
